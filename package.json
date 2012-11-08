@@ -1,0 +1,20 @@
+{
+  "name": "reload-cli",
+  "version": "0.0.0",
+  "description": "watch file and reload a command on file reload",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "node ./js/index.js"
+  },
+  "repository": "",
+  "keywords": [
+    "reload",
+    "linux",
+    "command"
+  ],
+  "author": "jiyinyiyong",
+  "license": "MIT",
+  "bin": {
+    "reload": "./bin/reload.js"
+  }
+}
