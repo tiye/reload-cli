@@ -1,15 +1,20 @@
-var show, ref$, exec, spawn, fs, cli, command, paramater, run, slice$ = [].slice;
+var show, ref$, exec, spawn, fs, cli, command, paramater, runner, run, slice$ = [].slice;
 show = console.log;
 ref$ = require('child_process'), exec = ref$.exec, spawn = ref$.spawn;
 fs = require('fs');
 cli = slice$.call(process.argv, 2);
 command = cli[0];
 paramater = slice$.call(cli, 1);
+runner = {};
 (run = function(){
-  var runner, x$, y$;
+  var x$, y$;
+  if (runner != null) {
+    if (runner.kill != null) {
+      runner.kill();
+    }
+  }
   show("\x1b[1;30mRestart...\x1b[0m");
   runner = spawn(command, paramater);
-  runner.set;
   x$ = runner;
   y$ = x$.stdout;
   y$.setEncoding('utf8');

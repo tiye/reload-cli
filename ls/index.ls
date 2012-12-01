@@ -9,11 +9,17 @@ cli = process.argv[2 to]
 command = cli.0
 paramater = cli[1 to]
 
-do run = ->
-  show "\033[1;30mRestart...\033[0m"
-  runner = spawn command, paramater
+runner = {}
 
-  runner.set
+do run = ->
+  if runner?
+    if runner.kill?
+      runner.kill!
+
+  show "\033[1;30mRestart...\033[0m"
+
+  runner := spawn command, paramater
+
   runner
     ..stdout
       ..set-encoding \utf8
