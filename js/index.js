@@ -1,5 +1,5 @@
 var show, ref$, exec, spawn, fs, cli, command, paramater, runner, run, slice$ = [].slice;
-show = console.log;
+show = require("util").print;
 ref$ = require('child_process'), exec = ref$.exec, spawn = ref$.spawn;
 fs = require('fs');
 cli = slice$.call(process.argv, 2);

@@ -1,5 +1,5 @@
 
-show = console.log
+show = require("util").print
 {exec, spawn} = require \child_process
 require! \fs
 
