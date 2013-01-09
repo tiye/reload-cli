@@ -1,4 +1,5 @@
 
+log = console.log
 show = require("util").print
 {exec, spawn} = require \child_process
 require! \fs
@@ -16,7 +17,7 @@ do run = ->
     if runner.kill?
       runner.kill!
 
-  show "\033[1;30mRestart...\033[0m"
+  log "\033[1;30mRestart...\033[0m"
 
   runner := spawn command, paramater
 

@@ -1,4 +1,5 @@
-var show, ref$, exec, spawn, fs, cli, command, paramater, runner, run, slice$ = [].slice;
+var log, show, ref$, exec, spawn, fs, cli, command, paramater, runner, run, slice$ = [].slice;
+log = console.log;
 show = require("util").print;
 ref$ = require('child_process'), exec = ref$.exec, spawn = ref$.spawn;
 fs = require('fs');
@@ -13,7 +14,7 @@ runner = {};
       runner.kill();
     }
   }
-  show("\x1b[1;30mRestart...\x1b[0m");
+  log("\x1b[1;30mRestart...\x1b[0m");
   runner = spawn(command, paramater);
   x$ = runner;
   y$ = x$.stdout;
