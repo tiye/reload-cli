@@ -1,5 +1,5 @@
 
-log = console.log
+require 'colors'
 print = require("util").print
 {exec, spawn} = require "child_process"
 fs = require "fs"
@@ -25,5 +25,5 @@ paramater.forEach (item) ->
     stat = fs.statSync item
     unless stat.isDirectory()
       fs.watchFile item, interval: 100, (curr, prev) ->
-        print "\n...Restart...\n"
+        print "\n\nRestarting...\n\n".blue
         do run

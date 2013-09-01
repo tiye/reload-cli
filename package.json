@@ -1,12 +1,15 @@
 {
   "name": "reload-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "watch file and reload a command on file reload",
   "main": "js/index.js",
   "scripts": {
-    "test": "node ./js/index.js"
+    "test": "./bin/reload.js coffee test/readline.coffee"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jiyinyiyong/reload-cli.git"
+  },
   "keywords": [
     "reload",
     "linux",
@@ -16,5 +19,15 @@
   "license": "MIT",
   "bin": {
     "reload": "./bin/reload.js"
+  },
+  "dependencies": {
+    "colors": "~0.6.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/jiyinyiyong/reload-cli/issues"
   }
 }
